@@ -1,340 +1,501 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="noindex, nofollow" name="robots"/>
-  <meta content="课程练习：个人介绍、技能与作品门户。" name="description"/>
-  <title>
-   我的个人主页
-  </title>
-  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-  <!-- CSS 负责颜色、字体、布局；defer 让 JavaScript 在 HTML 解析完成后执行。 -->
-  <link href="styles.css" rel="stylesheet"/>
-  <!-- 第 3 课只新增这一张样式表，不覆盖前两课的 styles.css。 -->
-  <link href="lesson-03-task.css" rel="stylesheet"/>
- 
- </head>
- <body>
-  <a class="skip-link" href="#main">
-   跳到正文
-  </a>
-  <header class="site-header">
-   <div class="container header-inner">
-    <a class="brand" href="#about">
-     我的主页
-    </a>
-    <!-- href="#栏目ID" 是原生锚点：即使不加载 JavaScript，也能跳到对应栏目。 -->
-    <nav aria-label="主导航">
-     <a href="#about">
-      关于
-     </a>
-     <a href="#experience">
-      经历
-     </a>
-     <a href="#projects">
-      科研
-     </a>
-     <a href="#skills">
-      技能
-     </a>
-     <a href="#portfolio">
-      作品
-     </a>
-     <a href="#teaching">
-      教学
-     </a>
-     <a href="#publications">
-      成果
-     </a>
-    </nav>
-   </div>
-  </header>
-  <main id="main">
-   <!-- HTML 练习：修改姓名、研究方向、照片路径和联系方式。 -->
-   <section class="hero" id="about">
-    <div class="container">
-     <div class="hero-top">
-      <div class="hero-copy">
-       <h1>
-        林同学
-        <span>
-         Lin
-        </span>
-       </h1>
-       <p class="hero-role">
-        软件技术专业学生 · 前端开发学习者
-       </p>
-       <p class="hero-school">
-        我的学校 · 我的班级
-       </p>
-      </div>
-      <div class="hero-visual">
-       <figure>
-        <img alt="个人头像占位图，请替换为自己的图片" height="220" src="assets/avatar.svg" width="220"/>
-       </figure>
-      </div>
-     </div>
-     <div class="research-direction" id="research-direction">
-      <span class="eyebrow">
-       学习方向
-      </span>
-      <p>
-       HTML5、CSS3、JavaScript，正在学习 Git、数据库与网站部署。
-      </p>
-     </div>
-     <div class="profile-details">
-      <div>
-       <span>
-        学习阶段
-       </span>
-       <p>
-        在校学习
-       </p>
-      </div>
-      <div>
-       <span>
-        所在城市
-       </span>
-       <p>
-        珠海
-       </p>
-      </div>
-      <div>
-       <span>
-        联系
-       </span>
-       <p>
-        请填写可公开的联系方式
-       </p>
-      </div>
-      <div>
-       <span>
-        学校地址
-       </span>
-       <p>
-        请填写自己的学校地址
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- 每个栏目复用 section → container → 标题/内容 的结构，统一由 CSS 控制样式。 -->
-   <section class="section" id="experience">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       教育与工作经历
-      </h2>
-     </header>
-     <div class="section-content">
-      <!-- TASK-HTML：复制 experience-item 可增加一条自己的经历。 -->
-      <div class="experience-item">
-       <p class="experience-heading">
-        <strong>
-         我的学校 · 软件技术专业
-        </strong>
-        <time>
-         在读
-        </time>
-       </p>
-       <p class="experience-detail">
-        学习网页开发，用项目记录成长。
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="section" id="projects">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       项目经历
-      </h2>
-     </header>
-     <div class="section-content">
-      <article class="research-item">
-       <h3>
-        <time>
-         课程练习
-        </time>
-        个人主页
-       </h3>
-       <p>
-        项目内容：制作自己的网页，展示资料与作品，记录修改、测试与发布过程。
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <section class="section" id="skills">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       技能与实践
-      </h2>
-     </header>
-     <div class="section-content">
-      <ul class="skills-list">
-       <li>
-        <strong>
-         网页内容
-        </strong>
-        HTML5 结构、图片、链接。
-       </li>
-       <li>
-        <strong>
-         页面样式
-        </strong>
-        CSS3 字体、颜色、响应式布局。
-       </li>
-       <li>
-        <strong>
-         开发过程
-        </strong>
-        JavaScript、Git、检查与部署。
-       </li>
-      </ul>
-     </div>
-    </div>
-   </section>
-   <section class="section" id="portfolio">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       作品门户
-      </h2>
-      <p class="works-notice">
-       以下为教学示例，完成后可替换为自己的作品。
-      </p>
-     </header>
-     <ol class="portfolio-list">
-      <li class="work-card work-blog">
-       <a href="https://ffd-p2-blog.netlify.app/" rel="noopener noreferrer" target="_blank">
-        <div class="work-cover">
-         <img alt="长风成卷 · 博客应用的实际网页截图" decoding="async" height="800" src="assets/work-blog.png" width="1200"/>
-        </div>
-        <div class="work-copy">
-         <h3>
-          长风成卷 · 博客应用
-         </h3>
-         <p>
-          文章展示、接口与数据库。
-         </p>
-        </div>
-       </a>
-      </li>
-      <li class="work-card work-community">
-       <a href="https://ffd-p3-community.netlify.app/" rel="noopener noreferrer" target="_blank">
-        <div class="work-cover">
-         <img alt="群像云图 · 社区应用的实际网页截图" decoding="async" height="800" src="assets/work-community.png" width="1200"/>
-        </div>
-        <div class="work-copy">
-         <h3>
-          群像云图 · 社区应用
-         </h3>
-         <p>
-          内容发布与社区互动。
-         </p>
-        </div>
-       </a>
-      </li>
-      <li class="work-card work-greeting-card">
-       <a href="https://ffd-p4-greeting-card.netlify.app/" rel="noopener noreferrer" target="_blank">
-        <div class="work-cover">
-         <img alt="一笺心意 · 祝福卡片的实际网页截图" decoding="async" height="800" src="assets/work-greeting-card.png" width="1200"/>
-        </div>
-        <div class="work-copy">
-         <h3>
-          一笺心意 · 祝福卡片
-         </h3>
-         <p>
-          卡片制作与作品分享。
-         </p>
-        </div>
-       </a>
-      </li>
-      <li class="work-card work-music-station">
-       <a href="https://ffd-p5-music-station.netlify.app/" rel="noopener noreferrer" target="_blank">
-        <div class="work-cover">
-         <img alt="星声音乐站 · 音乐应用的实际网页截图" decoding="async" height="800" src="assets/work-music-station.png" width="1200"/>
-        </div>
-        <div class="work-copy">
-         <h3>
-          星声音乐站 · 音乐应用
-         </h3>
-         <p>
-          网页音频与交互实践。
-         </p>
-        </div>
-       </a>
-      </li>
-     </ol>
-    </div>
-   </section>
-   <section class="section" id="teaching">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       学习与实践
-      </h2>
-     </header>
-     <div class="section-content">
-      <div class="teaching-group">
-       <h3>
-        本学期目标
-       </h3>
-       <ol>
-        <li>
-         每次课完成一个可运行的小改动。
-        </li>
-        <li>
-         能解释自己修改的 HTML、CSS 和 JavaScript。
-        </li>
-        <li>
-         使用 Git 记录版本，让作品能被别人访问。
-        </li>
-       </ol>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="section" id="publications">
-    <div class="container">
-     <header class="section-heading">
-      <h2>
-       学习记录
-      </h2>
-     </header>
-     <div class="section-content">
-      <div class="publication-group">
-       <h3>
-        我的记录
-       </h3>
-       <ol class="references">
-        <li>
-         完成第一张个人主页。
-        </li>
-        <li>
-         后续在这里补充自己的真实成果。
-        </li>
-       </ol>
-      </div>
-     </div>
-    </div>
-   </section>
-  </main>
-  <footer>
-   <div class="container footer-inner">
-    <a href="#about">
-     回到顶部
-    </a>
-    <a href="#portfolio">
-     作品门户
-    </a>
-   </div>
-  </footer>
- </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>黄淑娟个人简历</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E75480' d='M12 2C8 6.5 4.5 10 4.5 14a7.5 7.5 0 0 0 15 0C19.5 10 16 6.5 12 2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#FFF5F8;
+    --bg-deep:#FFE7F0;
+    --card:#FFFFFF;
+    --primary:#E75480;
+    --primary-deep:#C93E6B;
+    --pink-light:#FFD3E3;
+    --pink-pale:#FFF0F5;
+    --text:#54344A;
+    --text-soft:#8A6478;
+    --line:#F6D9E5;
+    --serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+    --sans:"Noto Sans SC","Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+    --shadow:0 8px 24px rgba(231,84,128,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
 
-<!-- 本课任务详见课堂任务.md。 -->
+  /* ===== 顶部导航 ===== */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,245,248,.85);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topnav-inner{
+    max-width:980px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;padding:12px 20px;
+  }
+  .brand{
+    font-family:var(--serif);font-weight:700;font-size:17px;
+    color:var(--primary-deep);
+    display:flex;align-items:center;gap:8px;
+    white-space:nowrap;
+  }
+  .brand-dot{width:9px;height:9px;border-radius:50%;background:var(--primary);flex:none}
+  .nav-links{
+    display:flex;gap:4px;list-style:none;
+    overflow-x:auto;scrollbar-width:none;
+  }
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{
+    display:block;padding:6px 12px;border-radius:999px;
+    font-size:14px;color:var(--text-soft);white-space:nowrap;
+    transition:background .2s,color .2s;
+  }
+  .nav-links a:hover{background:var(--pink-pale);color:var(--primary-deep)}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg,var(--bg-deep) 0%,var(--bg) 100%);
+    overflow:hidden;
+  }
+  .hero-deco{position:absolute;inset:0;pointer-events:none}
+  .hero-deco i{
+    position:absolute;display:block;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,rgba(255,179,211,.55),rgba(255,211,227,.12));
+  }
+  .hero-deco i:nth-child(1){width:220px;height:220px;top:-60px;right:-40px}
+  .hero-deco i:nth-child(2){width:140px;height:140px;bottom:20px;left:-50px}
+  .hero-deco i:nth-child(3){width:64px;height:64px;top:120px;left:12%}
+  .hero-deco svg{
+    position:absolute;width:26px;height:26px;fill:rgba(231,84,128,.35);
+  }
+  .hero-deco svg:nth-of-type(1){top:46%;right:18%}
+  .hero-deco svg:nth-of-type(2){bottom:18%;left:42%}
+  .hero-inner{
+    position:relative;z-index:1;
+    max-width:980px;margin:0 auto;
+    display:flex;align-items:center;gap:44px;
+    padding:64px 20px 72px;
+  }
+  .hero-text{flex:1;min-width:0}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;color:var(--primary-deep);
+    background:var(--pink-pale);border:1px solid var(--pink-light);
+    padding:4px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .hero-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--primary)}
+  .hero h1{
+    font-family:var(--serif);font-weight:900;
+    font-size:52px;line-height:1.15;color:var(--primary-deep);
+    letter-spacing:1px;
+  }
+  .hero .name-en{
+    font-family:var(--serif);font-weight:600;
+    font-size:22px;color:var(--text-soft);margin:4px 0 18px;
+  }
+  .hero .role{
+    font-size:18px;font-weight:500;color:var(--text);margin-bottom:6px;
+  }
+  .hero .school{
+    font-size:15px;color:var(--text-soft);margin-bottom:28px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:11px 26px;border-radius:999px;font-size:15px;font-weight:500;
+    transition:transform .15s,box-shadow .15s;
+  }
+  .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(231,84,128,.35)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(231,84,128,.42)}
+  .btn-ghost{
+    background:#fff;color:var(--primary-deep);
+    border:1px solid var(--pink-light);
+  }
+  .btn-ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .hero-avatar{flex:none}
+  .avatar-wrap{
+    position:relative;width:168px;height:168px;border-radius:50%;
+    padding:8px;background:linear-gradient(135deg,#fff,#FFD3E3);
+    box-shadow:0 14px 36px rgba(231,84,128,.28);
+  }
+  .avatar-wrap img{
+    width:100%;height:100%;object-fit:cover;
+    border-radius:50%;border:4px solid #fff;
+  }
+  .avatar-heart{
+    position:absolute;bottom:6px;right:2px;width:40px;height:40px;
+    background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 12px rgba(231,84,128,.3);
+  }
+  .avatar-heart svg{width:22px;height:22px;fill:var(--primary)}
+
+  /* ===== 通用区块 ===== */
+  .section{max-width:980px;margin:0 auto;padding:56px 20px}
+  .sec-head{margin-bottom:32px}
+  .sec-head .tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;color:var(--primary-deep);margin-bottom:8px;
+  }
+  .sec-head .tag svg{width:16px;height:16px;fill:var(--primary)}
+  .sec-head h2{
+    font-family:var(--serif);font-weight:700;font-size:30px;
+    color:var(--text);line-height:1.3;
+  }
+  .sec-head .sub{
+    font-size:13px;letter-spacing:2px;color:var(--text-soft);
+    text-transform:uppercase;margin-top:4px;
+  }
+  .sec-head .rule{
+    width:52px;height:3px;border-radius:2px;margin-top:12px;
+    background:linear-gradient(90deg,var(--primary),var(--pink-light));
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:16px;box-shadow:var(--shadow);
+  }
+
+  /* ===== 资料卡 ===== */
+  .info-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  }
+  .info-item{padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .info-ico{
+    flex:none;width:42px;height:42px;border-radius:12px;
+    background:var(--pink-pale);border:1px solid var(--pink-light);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .info-ico svg{width:22px;height:22px;fill:var(--primary)}
+  .info-item .label{font-size:12px;color:var(--text-soft);margin-bottom:2px}
+  .info-item .value{font-size:15px;font-weight:500;color:var(--text);word-break:break-all}
+  .info-item .value small{display:block;font-size:12px;color:var(--text-soft);font-weight:400}
+  .info-item .value a{color:var(--primary-deep);font-weight:500}
+
+  /* ===== 经历 ===== */
+  .exp-block{margin-bottom:14px;padding:22px 24px}
+  .exp-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+  .exp-head h3{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--primary-deep)}
+  .exp-head .meta{font-size:13px;color:var(--text-soft);white-space:nowrap;flex:none}
+  .exp-desc{font-size:14px;color:var(--text);margin-bottom:12px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+  .tags li{
+    font-size:13px;color:var(--primary-deep);
+    background:var(--pink-pale);border:1px solid var(--pink-light);
+    padding:3px 12px;border-radius:999px;
+  }
+  .proj-list{display:flex;flex-direction:column;gap:14px}
+  .proj-item{display:flex;gap:16px;padding:18px 22px;align-items:flex-start}
+  .proj-num{
+    flex:none;font-family:var(--serif);font-weight:700;font-size:15px;
+    color:#fff;background:var(--primary);
+    width:34px;height:34px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .proj-item h4{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
+  .proj-item p{font-size:14px;color:var(--text-soft)}
+
+  /* ===== 荣誉时间轴 ===== */
+  .timeline{padding:26px 24px 8px}
+  .tl-item{display:grid;grid-template-columns:84px 22px 1fr;column-gap:12px}
+  .tl-time{
+    font-family:var(--serif);font-weight:700;font-size:14px;
+    color:var(--primary-deep);text-align:right;padding-top:3px;white-space:nowrap;
+  }
+  .tl-axis{position:relative;display:flex;justify-content:center}
+  .tl-dot{
+    flex:none;width:12px;height:12px;border-radius:50%;
+    background:var(--primary);border:3px solid #fff;
+    box-shadow:0 0 0 2px var(--pink-light);
+    margin-top:5px;z-index:1;
+  }
+  .tl-axis::before{
+    content:"";position:absolute;left:50%;top:20px;bottom:-12px;
+    width:2px;background:var(--pink-light);transform:translateX(-50%);
+  }
+  .tl-item:last-child .tl-axis::before{display:none}
+  .tl-content{padding:0 0 20px}
+  .tl-content ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .tl-content li{
+    font-size:14px;color:var(--text);
+    background:var(--pink-pale);border:1px solid var(--line);
+    border-radius:10px;padding:8px 14px;
+    display:flex;gap:8px;align-items:flex-start;
+  }
+  .tl-content li svg{flex:none;width:15px;height:15px;fill:var(--primary);margin-top:4px}
+  .tl-content li .lvl{
+    flex:none;font-size:12px;font-weight:700;color:#fff;
+    background:var(--primary);border-radius:6px;padding:1px 8px;margin-top:2px;
+  }
+  .tl-content li .lvl.silver{background:#C98AA8}
+
+  /* ===== 页脚 ===== */
+  footer{
+    margin-top:20px;padding:26px 20px 34px;text-align:center;
+    border-top:1px solid var(--line);
+    color:var(--text-soft);font-size:13px;
+    background:linear-gradient(180deg,var(--bg),var(--bg-deep));
+  }
+  footer .heart{color:var(--primary)}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:720px){
+    .info-grid{grid-template-columns:1fr}
+    .hero-inner{flex-direction:column-reverse;text-align:center;gap:28px;padding:44px 20px 56px}
+    .hero h1{font-size:38px}
+    .hero-actions{justify-content:center}
+    .avatar-wrap{width:140px;height:140px}
+    .sec-head h2{font-size:26px}
+    .exp-head{flex-direction:column;gap:4px}
+    .exp-head .meta{white-space:normal}
+    .tl-item{grid-template-columns:64px 20px 1fr;column-gap:8px}
+    .tl-time{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important;animation:none !important}
+  }
+  @media print{
+    .topnav,.hero-actions{display:none}
+    .hero-inner{padding-top:20px}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<nav class="topnav" aria-label="页面导航">
+  <div class="topnav-inner">
+    <a class="brand" href="#top"><span class="brand-dot"></span>黄淑娟</a>
+    <ul class="nav-links">
+      <li><a href="#about">关于</a></li>
+      <li><a href="#exp">经历</a></li>
+      <li><a href="#honor">荣誉</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="top">
+  <div class="hero-deco" aria-hidden="true">
+    <i></i><i></i><i></i>
+    <svg viewBox="0 0 24 24"><path d="M12 2C8 6.5 4.5 10 4.5 14a7.5 7.5 0 0 0 15 0C19.5 10 16 6.5 12 2z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12 21s-6.7-4.3-9.3-8.2C1 9.9 2.4 6 6 6c2.2 0 4 1.3 6 3.5C14 7.3 15.8 6 18 6c3.6 0 5 3.9 3.3 6.8C18.7 16.7 12 21 12 21z"/></svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-badge">个人简历</span>
+      <h1>黄淑娟</h1>
+      <p class="name-en">Huang Shujuan</p>
+      <p class="role">人工智能技术应用专业学生</p>
+      <p class="school">广东科学技术职业学院（珠海校区）· 共青团员</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:15875369716">联系我</a>
+        <a class="btn btn-ghost" href="#honor">查看荣誉</a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <div class="avatar-wrap">
+        <img src="1.jpg" alt="黄淑娟的插画头像（占位，可替换为本人照片）">
+        <span class="avatar-heart">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.7-4.3-9.3-8.2C1 9.9 2.4 6 6 6c2.2 0 4 1.3 6 3.5C14 7.3 15.8 6 18 6c3.6 0 5 3.9 3.3 6.8C18.7 16.7 12 21 12 21z"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== 关于 / 资料卡 ===== -->
+  <section class="section" id="about">
+    <div class="sec-head">
+      <span class="tag"><svg viewBox="0 0 24 24"><path d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"/></svg>个人资料</span>
+      <h2>关于我</h2>
+      <p class="sub">About</p>
+      <div class="rule"></div>
+    </div>
+    <div class="info-grid">
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.2V18c0 1.7 3.1 3 7 3s7-1.3 7-3v-6.8L23 9l-11-6zm0 2.3 6.7 3.7L12 12.7 5.3 9 12 5.3zM7 17.6v-4.8l5 2.8 5-2.8v4.8c-.4.4-2.3 1.2-5 1.2s-4.6-.8-5-1.2z"/></svg></span>
+        <div><p class="label">专业</p><p class="value">人工智能技术应用</p></div>
+      </div>
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <div><p class="label">籍贯</p><p class="value">广东汕头</p></div>
+      </div>
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 1.4 3.6 2.3 5.4 2.3s4-.9 5.4-2.3l1.6 1.6c-1.8 1.8-4.5 2.9-7 2.9s-5.2-1.1-7-2.9l1.6-1.6zM12 2C7.6 2 3.7 4.4 1 7.7l1.6 1.6C4 6.3 7.8 4 12 4s8 2.3 9.4 5.3l1.6-1.6C20.3 4.4 16.4 2 12 2zm0 5c-2.8 0-5.3 1.1-7.2 2.9l1.6 1.6C7.7 10.1 9.8 9 12 9s4.3 1.1 5.6 2.5l1.6-1.6C17.3 8.1 14.8 7 12 7z"/></svg></span>
+        <div><p class="label">政治面貌</p><p class="value">共青团员</p></div>
+      </div>
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 1.4 3.6 2.3 5.4 2.3s4-.9 5.4-2.3l1.6 1.6c-1.8 1.8-4.5 2.9-7 2.9s-5.2-1.1-7-2.9l1.6-1.6zM16.5 3c.6 0 1 .4 1 1v2h-2V4c0-.6.4-1 1-1zm-9 0c.6 0 1 .4 1 1v2h-2V4c0-.6.4-1 1-1zM7 7h10c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V8c0-.6.4-1 1-1zm1 3v8h8v-8H8z"/></svg></span>
+        <div><p class="label">联系电话</p><p class="value"><a href="tel:15875369716">15875369716</a></p></div>
+      </div>
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm6.5.5c0 5-6.5 9-6.5 9S5.5 17.5 5.5 12.5a6.5 6.5 0 1 1 13 0zM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></span>
+        <div><p class="label">志愿服务</p><p class="value">107 小时 37 分钟<small>累计志愿服务时长</small></p></div>
+      </div>
+      <div class="card info-item">
+        <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8 6.5 4.5 10 4.5 14a7.5 7.5 0 0 0 15 0C19.5 10 16 6.5 12 2z"/></svg></span>
+        <div><p class="label">所在城市</p><p class="value">珠海</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 经历 ===== -->
+  <section class="section" id="exp">
+    <div class="sec-head">
+      <span class="tag"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5V7h3.5L15 3.5zM8 11h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>教育 · 学生工作 · 项目</span>
+      <h2>经历</h2>
+      <p class="sub">Experience</p>
+      <div class="rule"></div>
+    </div>
+
+    <div class="card exp-block">
+      <div class="exp-head">
+        <h3>广东科学技术职业学院 · 珠海校区</h3>
+        <span class="meta">人工智能技术应用专业 · 在读</span>
+      </div>
+      <p class="exp-desc">在专业学习之外，承担班级与学院学生工作，长期参与志愿服务与学科竞赛，在实践中锻炼组织与协作能力。</p>
+      <ul class="tags">
+        <li>班级学习委员</li>
+        <li>团委学习与文化实践中心 · 纪检部部长</li>
+        <li>何晓薇老师助理</li>
+        <li>青马班学员</li>
+      </ul>
+    </div>
+
+    <div class="card exp-block">
+      <h3 style="font-family:var(--serif);font-size:18px;font-weight:700;color:var(--primary-deep);margin-bottom:12px">项目与竞赛经历</h3>
+      <div class="proj-list">
+        <div class="proj-item">
+          <span class="proj-num">01</span>
+          <div>
+            <h4>AI+ 智能体创新应用大赛</h4>
+            <p>从选题构思、智能体搭建到决赛路演完整参与，获科技节决赛二等奖。</p>
+          </div>
+        </div>
+        <div class="proj-item">
+          <span class="proj-num">02</span>
+          <div>
+            <h4>微课程与公益广告作品</h4>
+            <p>完成微课程视频与公益广告短片的策划、录制与剪辑，获校赛一等奖与三等奖。</p>
+          </div>
+        </div>
+        <div class="proj-item">
+          <span class="proj-num">03</span>
+          <div>
+            <h4>个人主页 · 课程练习</h4>
+            <p>制作自己的网页，展示资料与作品，记录修改、测试与发布过程。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 荣誉时间轴 ===== -->
+  <section class="section" id="honor">
+    <div class="sec-head">
+      <span class="tag"><svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5a2 2 0 0 0-2 2v1h18V7a2 2 0 0 0-2-2zm1 5H4v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9zm-7 6.6V19h-2v-2.4a2.3 2.3 0 1 1 2 0z"/></svg>荣誉与奖项</span>
+      <h2>荣誉</h2>
+      <p class="sub">Honors</p>
+      <div class="rule"></div>
+    </div>
+
+    <div class="card timeline">
+      <div class="tl-item">
+        <div class="tl-time">2025-2026 学年</div>
+        <div class="tl-axis"><span class="tl-dot"></span></div>
+        <div class="tl-content">
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.7 0-8 1.3-8 4v1h16v-1c0-2.7-5.3-4-8-4z"/></svg><span>计算机工程技术学院第二十二届党团知识竞赛 <strong>优秀奖</strong></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2026.05</div>
+        <div class="tl-axis"><span class="tl-dot"></span></div>
+        <div class="tl-content">
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M12 17.3 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9L12 2.5l2.9 6 6.5.9-4.7 4.6 1.1 6.4z"/></svg><span>计算机工程技术学院 <strong>"心理工作标兵""优秀学习委员""优秀干事""纪检工作标兵"</strong>称号</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2026.06</div>
+        <div class="tl-axis"><span class="tl-dot"></span></div>
+        <div class="tl-content">
+          <ul>
+            <li><span class="lvl">二等奖</span><span>学校 2026 年 "AI+" 科技节智能体创新应用大赛决赛</span></li>
+            <li><span class="lvl silver">三等奖</span><span>第四届 "永创杯" 全国高校创意设计作品展评学生组</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M12 17.3 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9L12 2.5l2.9 6 6.5.9-4.7 4.6 1.1 6.4z"/></svg><span>青年马克思主义者培养工程培训班 <strong>优秀学员</strong></span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M12 17.3 6.2 20.5l1.1-6.5L2.6 9.4l6.5-.9L12 2.5l2.9 6 6.5.9-4.7 4.6 1.1 6.4z"/></svg><span>2025-2026 年度学校 <strong>优秀心理委员</strong></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2026.08</div>
+        <div class="tl-axis"><span class="tl-dot"></span></div>
+        <div class="tl-content">
+          <ul>
+            <li><span class="lvl silver">三等奖</span><span>第十二届 "东方财富杯" 全国大学生金融挑战赛省赛</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">2026.09</div>
+        <div class="tl-axis"><span class="tl-dot"></span></div>
+        <div class="tl-content">
+          <ul>
+            <li><span class="lvl">一等奖</span><span>第十一届广东高校网络媒体展示节校赛 · 微课程</span></li>
+            <li><span class="lvl">一等奖</span><span>"立志·修身·博学·报国"主题教育活动校赛 · 有声故事讲述诵读类</span></li>
+            <li><span class="lvl silver">三等奖</span><span>"立志·修身·博学·报国"主题教育活动校赛 · 公益广告类视频广告</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 黄淑娟 · 人工智能技术应用专业 · 粉色个人简历 <span class="heart"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:var(--primary);vertical-align:-2px"><path d="M12 21s-6.7-4.3-9.3-8.2C1 9.9 2.4 6 6 6c2.2 0 4 1.3 6 3.5C14 7.3 15.8 6 18 6c3.6 0 5 3.9 3.3 6.8C18.7 16.7 12 21 12 21z"/></svg></span> 用 HTML / CSS 用心制作</p>
+</footer>
+
+<script>
+  // 导航滚动高亮
+  var sections = document.querySelectorAll('main section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var inView = function(){
+    var pos = window.scrollY + 120;
+    var currentId = 'top';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos) currentId = sec.id;
+    });
+    navLinks.forEach(function(link){
+      var active = (link.getAttribute('href').slice(1) === currentId);
+      link.style.color = active ? 'var(--primary-deep)' : 'var(--text-soft)';
+      link.style.background = active ? 'var(--pink-pale)' : 'transparent';
+    });
+  };
+  window.addEventListener('scroll', inView, {passive:true});
+  inView();
+</script>
+</body>
+</html>
